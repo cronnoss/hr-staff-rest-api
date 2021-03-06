@@ -16,7 +16,9 @@ public class Department {
     @Column(name = "department_name")
     private String departmentName;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "department")
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE
+            , CascadeType.REFRESH, CascadeType.DETACH}
+            , mappedBy = "department")
     private List<Position> poss;
 
     public Department() {

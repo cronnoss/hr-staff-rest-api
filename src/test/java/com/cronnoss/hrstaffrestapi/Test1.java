@@ -65,6 +65,15 @@ public class Test1 {
             session.persist(emp5);
             session.persist(emp6);
 
+//            Employee employee = session.get(Employee.class, 6);
+//            session.delete(employee);
+
+//            Position position = session.get(Position.class, 4);
+//            session.delete(position);
+
+//            Department department = session.get(Department.class, 2);
+//            session.delete(department);
+
             session.getTransaction().commit();
 
         } finally {

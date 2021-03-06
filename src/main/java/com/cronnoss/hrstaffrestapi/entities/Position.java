@@ -13,7 +13,8 @@ public class Position {
     @Column(name = "posid")
     private int posid;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE
+            , CascadeType.REFRESH, CascadeType.DETACH})
     @JoinColumn(name = "depid")
     private Department department;
 
