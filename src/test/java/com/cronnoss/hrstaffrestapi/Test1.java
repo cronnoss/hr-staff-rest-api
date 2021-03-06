@@ -43,24 +43,28 @@ public class Test1 {
             dep2.addPositionToDepartment(pos4);
             dep3.addPositionToDepartment(pos5);
 
-            pos1.addEmployeeToPosition(emp1);
-            pos2.addEmployeeToPosition(emp2);
-            pos3.addEmployeeToPosition(emp3);
-            pos2.addEmployeeToPosition(emp3);
-            pos4.addEmployeeToPosition(emp4);
-            pos4.addEmployeeToPosition(emp5);
-            pos5.addEmployeeToPosition(emp6);
-            pos3.addEmployeeToPosition(emp6);
+            emp1.addPositionToEmployee(pos1);
+            emp2.addPositionToEmployee(pos2);
+            emp3.addPositionToEmployee(pos3);
+            emp3.addPositionToEmployee(pos2);
+            emp4.addPositionToEmployee(pos4);
+            emp5.addPositionToEmployee(pos4);
+            emp6.addPositionToEmployee(pos5);
+            emp6.addPositionToEmployee(pos3);
 
             session.beginTransaction();
-            session.save(dep1);
-            session.save(dep2);
-            session.save(dep3);
-            session.save(pos1);
-            session.save(pos2);
-            session.save(pos3);
-            session.save(pos4);
-            session.save(pos5);
+
+            session.persist(dep1);
+            session.persist(dep2);
+            session.persist(dep3);
+
+            session.persist(emp1);
+            session.persist(emp2);
+            session.persist(emp3);
+            session.persist(emp4);
+            session.persist(emp5);
+            session.persist(emp6);
+
             session.getTransaction().commit();
 
         } finally {

@@ -20,7 +20,8 @@ public class Position {
     @Column(name = "position_name")
     private String positionName;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE
+            , CascadeType.REFRESH, CascadeType.DETACH})
     @JoinTable(
             name = "positions_employees"
             , joinColumns = @JoinColumn(name = "posid")

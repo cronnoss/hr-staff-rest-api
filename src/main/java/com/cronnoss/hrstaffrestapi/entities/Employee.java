@@ -23,7 +23,8 @@ public class Employee {
     @Column(name = "salary")
     private int salary;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE
+            , CascadeType.REFRESH, CascadeType.DETACH})
     @JoinTable(
             name = "positions_employees"
             , joinColumns = @JoinColumn(name = "empid")
