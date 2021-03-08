@@ -1,4 +1,4 @@
-package com.cronnoss.hrstaffrestapi.entities;
+package com.cronnoss.hrstaffrestapi.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;

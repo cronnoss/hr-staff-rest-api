@@ -1,8 +1,8 @@
 package com.cronnoss.hrstaffrestapi;
 
-import com.cronnoss.hrstaffrestapi.entities.Department;
-import com.cronnoss.hrstaffrestapi.entities.Employee;
-import com.cronnoss.hrstaffrestapi.entities.Position;
+import com.cronnoss.hrstaffrestapi.entity.Department;
+import com.cronnoss.hrstaffrestapi.entity.Employee;
+import com.cronnoss.hrstaffrestapi.entity.Position;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
